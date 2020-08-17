@@ -1,7 +1,11 @@
 import {Layout, Page, EmptyState} from '@shopify/polaris';
 import {ResourcePicker, TitleBar} from '@shopify/app-bridge-react';
 import store from 'store-js';
-import ResourceListwithProducts from '..\\components\\ResourceList';
+import * as path from 'path';
+
+const resourceListModule = path.normalize('..\\components\\ResourceList');
+
+const ResourceListwithProducts = require(resourceListModule);
 
 const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
 
