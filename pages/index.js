@@ -4,7 +4,7 @@ import store from 'store-js';
 const os = require('os');
 var ResourceListwithProducts;
 var ResourceListPath='../components/ResourceList';
-if(process.env.OSTYPE='windows'){
+if(process.env.OSTYPE=='windows'){
     ResourceListPath='..\\components\\ResourceList';
 }
 
