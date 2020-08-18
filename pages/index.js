@@ -3,12 +3,14 @@ import {ResourcePicker, TitleBar} from '@shopify/app-bridge-react';
 import store from 'store-js';
 const os = require('os');
 var ResourceListwithProducts;
-//if(os.platform().startsWith('win')){
-//    ResourceListwithProducts = require('..\\components\\ResourceList').default;;
-//} 
-//else{
-    ResourceListwithProducts = require('../components/ResourceList').default;;
-//}
+var ResourceListPath='../components/ResourceList';
+if(os.platform().startsWith('win')){
+    Resource
+    ResourceListwithProducts = require('..\\components\\ResourceList').default;;
+} 
+
+ResourceListwithProducts = require(ResourceListPath).default;
+
 
 const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
 
@@ -56,7 +58,7 @@ class Index extends React.Component {
     handleSelection = (resources) => {
         const idsfromResources = resources.selection.map((product) => product.id);
         this.setState({open: false});
-        console.log(idsfromResources);
+        //console.log(idsfromResources);
         store.set('ids', idsfromResources);
     };
 }
