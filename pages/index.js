@@ -4,6 +4,8 @@ import store from 'store-js';
 const path = require('path');
 
 var ResourceListPath='..\\components\\ResourceList';
+var ResourceListwithProducts;
+
 if(process.env.OSTYPE=='windows'){
     ResourceListwithProducts = __non_webpack_require__(ResourceListPath).default;
 } else {
