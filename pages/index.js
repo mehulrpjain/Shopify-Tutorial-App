@@ -1,14 +1,14 @@
 import {Layout, Page, EmptyState} from '@shopify/polaris';
 import {ResourcePicker, TitleBar} from '@shopify/app-bridge-react';
 import store from 'store-js';
-const os = require('os');
-var ResourceListPath='../components/ResourceList';
-if(process.env.OSTYPE=='windows'){
-    ResourceListPath='..\\components\\ResourceList';
-}
+const path = require('path');
 
-var ResourceListwithProducts = require('../components/ResourceList').default;
+//var ResourceListPath='../components/ResourceList';
+//if(process.env.OSTYPE=='windows'){
+//    ResourceListPath='..\\components\\ResourceList';
+//}
 
+var ResourceListwithProducts = require(path.join('..', 'components', 'ResourceList')).default;
 
 const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
 
