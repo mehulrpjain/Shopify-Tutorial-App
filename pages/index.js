@@ -3,12 +3,14 @@ import {ResourcePicker, TitleBar} from '@shopify/app-bridge-react';
 import store from 'store-js';
 const path = require('path');
 
-//var ResourceListPath='../components/ResourceList';
-//if(process.env.OSTYPE=='windows'){
-//    ResourceListPath='..\\components\\ResourceList';
-//}
+var ResourceListPath='..\\components\\ResourceList';
+if(process.env.OSTYPE=='windows'){
+    ResourceListwithProducts = __non_webpack_require__(ResourceListPath).default;
+} else {
+    ResourceListwithProducts = require('../components/ResourceList').default;
+}
 
-var ResourceListwithProducts = require(path.join('..', 'components', 'ResourceList')).default;
+
 
 const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
 
