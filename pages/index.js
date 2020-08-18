@@ -5,8 +5,7 @@ const os = require('os');
 var ResourceListwithProducts;
 var ResourceListPath='../components/ResourceList';
 if(os.platform().startsWith('win')){
-    Resource
-    ResourceListwithProducts = require('..\\components\\ResourceList').default;;
+    ResourceListPath='..\\components\\ResourceList';
 } 
 
 ResourceListwithProducts = require(ResourceListPath).default;
